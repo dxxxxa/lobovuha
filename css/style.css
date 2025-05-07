@@ -721,15 +721,18 @@ footer {
 }
 
 .big-logo {
-  width: 320px;
-  height: 320px;
+  max-width: 90vw;
+  max-height: 40vw;
+  width: auto;
+  height: auto;
   display: block;
   margin: 0 auto 1.5rem auto;
 }
 @media (max-width: 800px) {
   .big-logo {
-    width: 140px;
-    height: 140px;
+    max-width: 80vw;
+    max-height: 30vw;
+    margin-bottom: 1rem;
   }
 }
 
@@ -786,12 +789,12 @@ footer {
 
 .main-nav {
   display: flex;
-  justify-content: center;
-  gap: 2.5rem;
+  justify-content: flex-start;
+  gap: 1.2rem;
   background: #181c24;
   border-radius: 2.5em;
   box-shadow: 0 8px 32px 0 rgba(58, 141, 255, 0.18), 0 1.5px 0 #23242a;
-  padding: 1.2rem 2.5rem;
+  padding: 1.2rem 1rem;
   margin: 0 auto 2.5rem auto;
   max-width: 100vw;
   width: 100%;
@@ -801,6 +804,7 @@ footer {
   border: 1.5px solid #23242a;
   backdrop-filter: blur(6px);
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .main-nav a {
   color: #3a8dff;
@@ -815,6 +819,8 @@ footer {
   align-items: center;
   gap: 0.7em;
   box-shadow: none;
+  min-width: 120px;
+  justify-content: center;
 }
 .main-nav a:hover {
   color: #fff;
@@ -823,18 +829,20 @@ footer {
 }
 @media (max-width: 800px) {
   .main-nav {
-    gap: 1rem;
+    gap: 0.5rem;
     padding: 0.7rem 0.2rem;
     border-radius: 1.2em;
     font-size: 0.95rem;
     min-width: 340px;
     width: max-content;
     margin: 0 auto 1.2rem auto;
+    max-width: 100vw;
   }
   .main-nav a {
     font-size: 1rem;
     padding: 0.2em 0.7em;
     border-radius: 1em;
+    min-width: 100px;
   }
 }
 
