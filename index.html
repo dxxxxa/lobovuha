@@ -25,10 +25,11 @@
       }
     }
     .nav-scroll {
-      width: 100% !important;
-      overflow-x: hidden !important;
-      padding: 0 1rem !important;
-      margin-bottom: 2rem !important;
+      width: 100vw !important;
+      overflow-x: auto !important;
+      padding: 0 !important;
+      margin-bottom: 1.2rem !important;
+      -webkit-overflow-scrolling: touch !important;
     }
     .main-nav {
       display: flex !important;
@@ -42,8 +43,8 @@
       padding: 0.8rem 1rem !important;
       margin: 0 auto !important;
       width: max-content !important;
-      min-width: 340px !important;
-      max-width: 100% !important;
+      min-width: unset !important;
+      max-width: none !important;
       position: relative !important;
       z-index: 10 !important;
       border: 1.5px solid #23242a !important;
@@ -67,6 +68,15 @@
       box-shadow: none !important;
       justify-content: center !important;
       white-space: nowrap !important;
+      outline: none !important;
+      background: none !important;
+    }
+    .main-nav a:active,
+    .main-nav a:focus {
+      outline: none !important;
+      background: none !important;
+      color: #3a8dff !important;
+      box-shadow: none !important;
     }
     .main-nav a:hover {
       color: #fff !important;
@@ -74,14 +84,12 @@
     }
     @media (max-width: 800px) {
       .nav-scroll {
-        padding: 0 0.5rem !important;
         margin-bottom: 1rem !important;
       }
       .main-nav {
         gap: 0.4rem !important;
         padding: 0.6rem 0.8rem !important;
         border-radius: 1.2em !important;
-        min-width: 320px !important;
       }
       .main-nav a {
         font-size: 0.95rem !important;
